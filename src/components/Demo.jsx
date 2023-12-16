@@ -79,9 +79,14 @@ const Demo = () => {
         </form>
 
         <div className="flex flex-col gap-1 max-h-60 overflow-y-auto">
-          <p className="font-satoshi font-bold text-gray-600 text-xl">
-            History
-          </p>
+          {article.summary ? (
+            <p className="font-satoshi font-bold text-gray-600 text-xl">
+              History
+            </p>
+          ) : (
+            <span></span>
+          )}
+
           {allArticles.map((item, index) => (
             <div
               key={`link-${index}`}
